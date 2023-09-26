@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <button onclick="datify()">show date</button>
+    <br>
+    <span id="dt"></span>
+    <br>
+    <button onclick="timify()">show Time</button>
+    <br>
+    <span id="tm"></span>
+    <script>
+        datify = () => {
+            let dt = new Date();
+            let day = dt.getDate();
+            let month = dt.toLocaleString('default', { month: 'long' });
+            let year = dt.getFullYear();
+            document.getElementById("dt").innerText = `${day}/${month}/${year}`;
+        }
+        timify=()=>{
+            let dt=new Date();
+            document.getElementById("tm").innerText=dt;
+        }
+    </script>
+  </body>
+</html>

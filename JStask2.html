@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Alphabetical Order</h1>
+    <input type="text" id="Input"><button onclick="press()">Convert</button>
+    <h1>Ouput:</h1>
+    <p id="alpha"></p>
+    <script>
+        function press(){
+            let a=document.getElementById('Input').value;
+            function sortString(a){
+                return a.split('').sort().join('');
+            }
+            document.getElementById("alpha").innerHTML =sortString(a);
+        }
+    </script>
+</body>
+</html>
